@@ -34,7 +34,7 @@ if ENV.fetch('PACT_BROKER_BASIC_AUTH_USERNAME','') != '' && ENV.fetch('PACT_BROK
   use Rack::Auth::Basic, "Restricted area" do |username, password|
     username == ENV['PACT_BROKER_BASIC_AUTH_USERNAME'] && password == ENV['PACT_BROKER_BASIC_AUTH_PASSWORD']
   end
-end
+end 
 
 app = PactBroker::App.new do | config |
   config.logger = ::Logger.new($stdout)
