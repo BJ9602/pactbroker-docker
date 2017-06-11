@@ -19,7 +19,7 @@ if defined?(PhusionPassenger)
 end
 
 DATABASE_CREDENTIALS = {
-  adapter: "postgres",
+  adapter: ENV['PACT_BROKER_DATABASE_ADAPTER'],
   user: ENV['PACT_BROKER_DATABASE_USERNAME'],
   password: ENV['PACT_BROKER_DATABASE_PASSWORD'],
   host: ENV['PACT_BROKER_DATABASE_HOST'],
